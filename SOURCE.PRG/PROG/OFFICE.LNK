@@ -1,0 +1,6 @@
+RESIDENT
+FI office
+DYNAMIC
+FI teleph,business,first,datebase,calend
+FI meeting,note,print,city,help,inithelp
+LIB clipper,extend

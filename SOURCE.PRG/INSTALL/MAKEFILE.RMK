@@ -1,0 +1,22 @@
+#----------------------------------------------------------
+# макpоопpеделения
+OBJ  = install.obj telephon.obj business.obj \
+       meeting.obj notepad.obj
+
+#----------------------------------------------------------
+# PRG's
+.prg.obj :
+  CLIPPER $* /L /M /N
+
+#----------------------------------------------------------
+# EXE
+install.exe : $(OBJ) install.lnk
+  rtlink @install
+
+#----------------------------------------------------------
+install.obj      : install.prg
+telephon.obj     : telephon.prg
+business.obj     : business.prg
+meeting.obj      : meeting.prg
+notepad.obj      : notepad.prg
+#----------------------------------------------------------

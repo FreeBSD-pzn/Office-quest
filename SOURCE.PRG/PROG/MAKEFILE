@@ -1,0 +1,33 @@
+# макpоопpеделения
+OBJ = office.obj teleph.obj business.obj first.obj \
+      datebase.obj calend.obj meeting.obj help.obj \
+      note.obj print.obj city.obj licensia.obj
+
+#----- PRG's
+.prg.obj :
+  CLIPPER $*.prg /L /M /N  /D$(DEFINE)
+
+#----- EXE
+office.exe : $(OBJ) office.lnk
+  rtlink @office
+  if exist *.bak del *.bak
+#  del office.obj
+#  del business.obj
+#  del meeting.obj
+#  del teleph.obj
+#  del note.obj
+#---------------------------------------------------------------
+
+office.obj      : office.prg
+teleph.obj      : teleph.prg
+business.obj    : business.prg
+calend.obj      : calend.prg
+first.obj       : first.prg
+datebase.obj    : datebase.prg
+meeting.obj     : meeting.prg
+help.obj        : help.prg
+note.obj        : note.prg
+print.obj       : print.prg
+city.obj        : city.prg
+licensia.obj    : licensia.prg
+#---------------------------------------------------------------
